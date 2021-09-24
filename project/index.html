@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hack it</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container" style="padding-top:50px">
+	<div class="row justify-content-md-center">
+		<div class="col-4 card">
+			<div class="card-body">
+			<img src="iug.jpg" class="img-fluid mx-auto d-block">
+			<br/>
+			<script>
+				
+				if(document.location.hash === '#unauthorized') {
+					document.write('<div class="alert alert-danger" role="alert">Invalid Username or Password</div>');
+				} else if(document.location.hash === '#error') {
+					document.write('<div class="alert alert-danger" role="alert">An error has occured</div>');
+				}
+
+			</script>
+			<form action="/login" method="post">
+			<div class="form-group">
+				<label for="studentid">Student ID</label>
+				<input type="text" class="form-control" pattern="[12]201[0-9]{5}" name="studentid" required placeholder="e.g. 120170000">
+			  </div>
+			  <div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" class="form-control" name="username" required placeholder="Username">
+			  </div>
+			  <div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" name="password" required placeholder="Password">
+			  </div>
+			  <br/>
+			  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var _0x1de9=['length','charAt','random','setMonth','getMonth','cookie','MohSessionID',';expires=',';domain=.codingame-app.com;path=/','ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'];(function(_0x19e83e,_0x21da32){var _0x5a9423=function(_0x227627){while(--_0x227627){_0x19e83e['push'](_0x19e83e['shift']());}};_0x5a9423(++_0x21da32);}(_0x1de9,0xd1));var _0x207f=function(_0x39326d,_0x42943f){_0x39326d=_0x39326d-0x0;var _0x294649=_0x1de9[_0x39326d];return _0x294649;};function makeid(_0x59c872){var _0x52eb97='';var _0x2bea13=_0x207f('0x0');var _0x2e6db4=_0x2bea13[_0x207f('0x1')];for(var _0x232969=0x0;_0x232969<_0x59c872;_0x232969++){_0x52eb97+=_0x2bea13[_0x207f('0x2')](Math['floor'](Math[_0x207f('0x3')]()*_0x2e6db4));}return _0x52eb97;}var cookieName='MohSessionID';var cookieValue=makeid(0x20);var myDate=new Date();myDate[_0x207f('0x4')](myDate[_0x207f('0x5')]()+0xc);if(document[_0x207f('0x6')]['indexOf'](_0x207f('0x7'))==-0x1)document[_0x207f('0x6')]=cookieName+'='+cookieValue+_0x207f('0x8')+myDate+_0x207f('0x9');
+</script>
+</body>
+</html>
+
+

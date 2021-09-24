@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hack it</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container" style="padding-top:50px">
+	<div class="row justify-content-md-center">
+		<div class="col-8 card">
+			<div class="card-body">
+			<script>
+				if(document.location.hash === '#ThanksHacker') {
+					stcode = "{{stcode}}";
+					document.write('<div class="alert alert-success" role="alert">Thanks a lot awesome hacker ;)\
+					<br/>Please submit this code to your TA\
+					<br/>'+stcode+'\
+					</div>');
+				}
+
+			</script>
+			<form action="/addcomment" method="post" onsubmit="if (document.getElementById('comment').value.indexOf('<')!=-1) { event.preventDefault(); alert('You can\'t send < in your comment');}">
+				<div class="input-group mb-3">
+				  <input type="text" name="comment" id="comment" class="form-control" placeholder="Comment...">
+				  <div class="input-group-append">
+					<input type="submit" value="POST" class="btn btn-outline-secondary" />
+				  </div>
+				</div>
+			</form>
+			<ul class="list-group list-group-flush">
+			  <li class="list-group-item">{{comments}}</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+

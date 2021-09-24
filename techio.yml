@@ -1,10 +1,10 @@
-title: Node.js Project
+title: IUG ECOM 5401 LAB 02
 plan:
-- title: Welcome
-  statement: markdowns/welcome.md
+- title: Hack This site
+  statement: statement.md
 projects:
   nodejs:
-    root: /nodejs-project
+    root: /project
     runner:
       name: techio/node-npm-runner
       version: latest
