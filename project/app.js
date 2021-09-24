@@ -61,7 +61,7 @@ app.get('/dashboard', function (req, res) {
 		let ip = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 		stcode = "";
 		if (xssdone)
-			stcode = Buffer.from (gstudentid + ":" + req.cookies.MohSessionID + ":" + ip + ":" + gstudentname).toString(2);
+			stcode = Buffer.from (gstudentid + ":" + req.cookies.MohSessionID + ":" + ip + ":" + gstudentname).toString('hex');
 		res.send (dashboardHTML.replace ("{{comments}}", commentsHTML).replace("{{stcode}}", stcode));
 	});
 });
